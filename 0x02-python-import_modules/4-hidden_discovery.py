@@ -2,14 +2,10 @@
 
 if __name__ == "__main__":
 
-    import marshal
+    import hidden_4
 
-    with open('hidden_4.pyc', 'rb') as f:
-        code = marshal.load(f)
+    names = dir(hidden_4)
+    for name in names:
+        if name[:2] != "__":
+            print(name)
 
-    names = code.co_names
-
-    filt_names = [name for name in names if not name.startswith('_')]
-
-    for name in filt_names:
-        print(name)
