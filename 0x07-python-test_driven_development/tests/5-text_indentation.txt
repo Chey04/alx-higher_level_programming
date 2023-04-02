@@ -1,0 +1,32 @@
+"""
+This docstring contains edge cases for 5-text_indentation.py
+
+>>> text_indent = __import__('5-text_indentation').text_indentation
+>>> text_indent("Hello World. What's your name? Two things I like: Food and rest")
+Hello World
+<BLANKLINE>
+What's your name
+<BLANKLINE>
+Two things I like
+<BLANKLINE>
+Food and rest
+<BLANKLINE>
+
+>>> text_indent("New\nlines\nstill\nwork")
+New
+<BLANKLINE>
+lines
+<BLANKLINE>
+still
+<BLANKLINE>
+work
+
+>>> text_indent(65)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indent(None)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+"""

@@ -1,0 +1,35 @@
+"""
+This docstring checks if add_integer.py works correctly
+
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(5, 5)
+10
+>>> add_integer(3, 4.3)
+7
+>>> add_integer(4, -3)
+1
+>>> add_integer(0)
+98
+
+>>> add_integer("add", 3)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer(7, "add")
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+>>> add_integer("add", True)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer(None)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer(9, None)
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+
+"""
