@@ -17,6 +17,7 @@ def board_deepcopy(board):
         return list(map(board_deepcopy, board))
     return (board)
 
+
 def recursive_solve(board, row, queens, solutions):
     """Recursively solve an N-queens puzzle.
     Args:
@@ -40,6 +41,7 @@ def recursive_solve(board, row, queens, solutions):
                                         queens + 1, solutions)
 
     return (solutions)
+
 
 def get_solution(board):
     """Return the list of lists representation of a solved chessboard."""
