@@ -60,5 +60,6 @@ class Rectangle:
         symbol = str(self.print_symbol)
         for i in range(self.__height):
             rec_str = rec_str + symbol * self.__width
-            rec_str += '\n'
+            if i != self.__height - 1:
+                rec_str += '\n'
         return (rec_str)
