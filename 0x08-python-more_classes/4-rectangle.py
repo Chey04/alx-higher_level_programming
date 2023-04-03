@@ -5,9 +5,7 @@
 class Rectangle:
     """Represent a rectangle.
     """
-
-
-    def __init__(self, width=0, height=0,):
+    def __init__(self, width=0, height=0):
         """Initialize a new Rectangle.
         Args:
             width (int): The width of rectangle.
@@ -54,16 +52,16 @@ class Rectangle:
         return(2 * (self.__width + self.__height))
 
     def __str__(self):
-         """Return the printable representation of the Rectangle.
-        """
-        if self.__width == 0 or self.__height == 0:
+         """Return the printable representation of the Rectangle."""
+         if self.__width == 0 or self.__height == 0:
             return('')
         rec_str = ''
+
         symbol = str(self.print_symbol)
         for i in range(self.__height):
             rec_str = rec_str + symbol * self.__width
             rec_str += '\n'
-        return (rec_str)
+            return (rec_str)
 
     def __repr__(self):
          """Returns exact  string representation of the Rectangle."""
