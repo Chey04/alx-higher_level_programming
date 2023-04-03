@@ -33,8 +33,8 @@ class Rectangle:
         self.__width = value
 
     @property
-    """Get and set the height of the Rectangle."""
     def height(self):
+        """Get and set the height of the Rectangle."""
         return(self.__height)
 
     @height.setter
@@ -52,17 +52,16 @@ class Rectangle:
         return(2 * (self.__width + self.__height))
 
     def __str__(self):
-         """Return the printable representation of the Rectangle."""
-         if self.__width == 0 or self.__height == 0:
-            return('')
+        """Return the printable representation of the Rectangle."""
+        if self.__width == 0 or self.__height == 0:
+             return('')
         rec_str = ''
 
-        symbol = str(self.print_symbol)
         for i in range(self.__height):
-            rec_str = rec_str + symbol * self.__width
+            rec_str = rec_str + "#" * self.__width
             rec_str += '\n'
             return (rec_str)
 
     def __repr__(self):
-         """Returns exact  string representation of the Rectangle."""
-        return("Rectangle({}, {})".format(self.__width, self.__height))
+        """Returns exact  string representation of the Rectangle."""
+        return("Rectangle({}, {})".format(str(self.__width), str(self.__height)))
