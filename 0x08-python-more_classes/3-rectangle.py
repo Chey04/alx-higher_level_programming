@@ -1,7 +1,19 @@
 #!/usr/bin/python3
+"""Defines a Rectangle class."""
+
 
 class Rectangle:
-    def __init__(self, width=0, height=0):
+    """Represent a rectangle.
+    """
+
+
+    def __init__(self, width=0, height=0,):
+        """Initialize a new Rectangle.
+        Args:
+            width (int): The width of rectangle.
+            height (int): The height of rectangle.
+        """
+
         if not isinstance(width, int):
             raise TypeError("width must be an integer")
         if width < 0:
@@ -15,6 +27,7 @@ class Rectangle:
 
     @property
     def width(self):
+        """Get and set the width of the Rectangle."""
         return(self.__width)
 
     @width.setter
@@ -22,6 +35,7 @@ class Rectangle:
         self.__width = value
 
     @property
+    """Get and set the height of the Rectangle."""
     def height(self):
         return(self.__height)
 
@@ -30,18 +44,24 @@ class Rectangle:
         self.__height = value
 
     def area(self):
+        """Return the area of the Rectangle."""
         return(self.__width * self.__height)
 
     def perimeter(self):
+        """Return the perimeter of the Rectangle."""
         if self.__width == 0 and self.__height == 0:
             return(0)
         return(2 * (self.__width + self.__height))
 
     def __str__(self):
+         """Return the printable representation of the Rectangle.
+        """
         if self.__width == 0 or self.__height == 0:
             return('')
         rec_str = ''
+        symbol = str(self.print_symbol)
         for i in range(self.__height):
-            rec_str = rec_str + '#' * self.__width
+            rec_str = rec_str + symbol * self.__width
             rec_str += '\n'
         return (rec_str)
+
