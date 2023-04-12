@@ -6,4 +6,3 @@ import json
 def to_json_string(my_obj):
     '''function to make python obj a json file'''
     return json.dumps(my_obj)
-
