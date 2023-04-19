@@ -2,6 +2,7 @@
 '''Module to define a Recatngle'''
 from models.base import Base
 
+
 class Rectangle(Base):
     '''
     This class defines a rectangle
@@ -61,7 +62,7 @@ class Rectangle(Base):
             raise TypeError("{} must be an integer".format(name))
         if wh and value <= 0:
             raise ValueError("{} must be > 0".format(name))
-        elif not wh and value < 0: 
+        elif not wh and value < 0:
             raise ValueError("{} must be >= 0".format(name))
 
     def area(self):
@@ -75,13 +76,13 @@ class Rectangle(Base):
         for i in range(self.height):
             print('#' * self.width)
         '''
-        rect = '\n' * self.y + (' ' * self.x + '#'\
-                * self.width + '\n') * self.height
+        rect = '\n' * self.y + (' ' * self.x + '#'
+                                * self.width + '\n') * self.height
         print(rect, end='')
 
     def __str__(self):
-        return("[{}] ({}) {}/{} - {}/{}".format\
-                (type(self).__name__, self.id, self.x, self.y,\
+        return("[{}] ({}) {}/{} - {}/{}".format(
+                type(self).__name__, self.id, self.x, self.y,
                 self.width, self.height))
 
     def update(self, *args, **kwargs):
